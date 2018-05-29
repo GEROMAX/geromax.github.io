@@ -13,11 +13,12 @@ function activateGallery() {
       );
 
       // toggle current
-      let oldCurrent = document.querySelector("#gallery-thumbs > div.current");
+      let currentClass = "current";
+      let oldCurrent = document.querySelector(`#gallery-thumbs > div.${currentClass}`);
       if (oldCurrent !== null) {
-        oldCurrent.classList.remove("current");
+        oldCurrent.classList.remove(currentClass);
       }
-      this.parentNode.classList.toggle("current");
+      this.parentNode.classList.toggle(currentClass);
     });
   });
 
