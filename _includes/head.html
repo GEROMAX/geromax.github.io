@@ -17,4 +17,12 @@
   <link href="/css/reset.css" rel="stylesheet">
   <link href="/css/main.css" rel="stylesheet">
   <link href="/fonts/fontawesome/css/fontawesome-all.css" rel="stylesheet">
+  {% if page.url == "/gallery/" %}
+    <script src="/js/gallery.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        activateGallery();
+      });
+    </script>
+  {% endif %}
 </head>
