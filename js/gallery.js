@@ -11,18 +11,12 @@ function activateGallery() {
       mainImage.setAttribute("alt", this.getAttribute("alt"));
 
       // description set
-      document.querySelector(
-        "#gallery-info > h3"
-      ).innerHTML = this.dataset.title;
-      document.querySelector(
-        "#gallery-info > p"
-      ).innerHTML = this.dataset.description;
+      document.querySelector("#gallery-info > h3").innerHTML = this.dataset.title;
+      document.querySelector("#gallery-info > p").innerHTML = this.dataset.description;
 
       // toggle current
       let currentClass = "current";
-      let oldCurrent = document.querySelector(
-        `#gallery-thumbs > div.${currentClass}`
-      );
+      let oldCurrent = document.querySelector(`#gallery-thumbs > div.${currentClass}`);
       if (oldCurrent !== null) {
         oldCurrent.classList.remove(currentClass);
       }
